@@ -109,7 +109,7 @@
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="300px"
           >
-            <h1 class="text-center font-size">Lorem & Ipsum</h1>
+            <h1 class="text-center font-size">Stylish</h1>
             <div class="text-center mt-2">
               <v-btn class="white--text caption"  href="/shop" text>SHOP NOW <v-icon class="white--text caption">mdi-arrow-right</v-icon></v-btn>
             </div>
@@ -126,7 +126,7 @@
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="300px"
           >
-            <h1 class="text-center font-size">Lorem & Ipsum</h1>
+            <h1 class="text-center font-size">Simple But Cool</h1>
             <div class="text-center mt-2">
               <v-btn class="white--text caption"  href="/shop" text>SHOP NOW <v-icon class="white--text caption">mdi-arrow-right</v-icon></v-btn>
             </div>
@@ -143,7 +143,7 @@
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="300px"
           >
-            <h1 class="text-center font-size">Lorem & Ipsum</h1>
+            <h1 class="text-center font-size">To Complete Your Style</h1>
             <div class="text-center mt-2">
               <v-btn class="white--text caption"  href="/shop" text>SHOP NOW <v-icon class="white--text caption">mdi-arrow-right</v-icon></v-btn>
             </div>
@@ -175,11 +175,10 @@
                     height="200px"
                     :src="require('../assets/img/home/deal1.jpg')"
                   >
-                    <v-card-title>Bags & Purses </v-card-title>
                   </v-img>
 
                   <v-card-text class="text--primary text-center">
-                    <div>Upto 60% + Extra 10%</div>
+                    <div>Upto 60%</div>
                     <div>Baggit, Zara, Fossil</div>
                   </v-card-text>
 
@@ -209,12 +208,11 @@
                     height="200px"
                     :src="require('../assets/img/home/deal2.jpg')"
                   >
-                    <v-card-title>T-Shirt </v-card-title>
                   </v-img>
 
                   <v-card-text class="text--primary text-center">
-                    <div>Upto 50%</div>
-                    <div>Zara, Selected, Celio</div>
+                    <div>Upto 40%</div>
+                    <div>Zara & Guess</div>
                   </v-card-text>
 
                   <div class="text-center">
@@ -240,14 +238,13 @@
                   <v-img
                     class="white--text align-end"
                     height="200px"
-                    :src="require('../assets/img/home/deal3.jpg')"
+                    :src="require('../assets/img/home/slider3.jpg')"
                   >
-                    <v-card-title>Jeans </v-card-title>
                   </v-img>
 
                   <v-card-text class="text--primary text-center">
-                    <div>Upto 60% + Extra 10%</div>
-                    <div>Jack & Jones, Levis</div>
+                    <div>Upto 60% </div>
+                    <div>Emory & Luis Vuitton</div>
                   </v-card-text>
 
                   <div class="text-center">
@@ -273,14 +270,13 @@
                   <v-img
                     class="white--text align-end"
                     height="200px"
-                    :src="require('../assets/img/home/deal4.jpg')"
+                    :src="require('../assets/img/home/slider1.jpg')"
                   >
-                    <v-card-title>Shoes </v-card-title>
                   </v-img>
 
                   <v-card-text class="text--primary text-center">
-                    <div>Upto 60% + Extra 10%</div>
-                    <div>Nike, Adidas, Puma</div>
+                    <div>Upto 60%</div>
+                    <div>Hermes, Channel, Gucci</div>
                   </v-card-text>
 
                   <div class="text-center">

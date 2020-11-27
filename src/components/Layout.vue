@@ -22,19 +22,6 @@
         class="hidden-sm-and-down pl-10 ml-4"
       />
       <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-account-circle</v-icon>
-      </v-btn>
-      <v-btn v-on="on" icon>
-        <v-badge
-          content="2"
-          value="2"
-          color="green"
-          overlap
-        >
-          <v-icon>mdi-bell</v-icon>
-        </v-badge>
-      </v-btn>
       <v-btn v-on="on" href="/cart" icon>
         <v-badge
           content="2"
@@ -45,6 +32,25 @@
           <v-icon>mdi-cart</v-icon>
         </v-badge>
       </v-btn>
+      <v-menu open-on-hover offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon>mdi-account-circle</v-icon>
+          </v-btn>
+        </template>
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          outlined>
+
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+            @click="">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-card>
+      </v-menu>
     </v-app-bar>
     <v-content>
       <v-bottom-navigation
@@ -55,29 +61,9 @@
         <a href="/" class="v-btn">
           <span>Home</span>
         </a>
-        <v-menu open-on-hover offset-y>
-          <template v-slot:activator="{ on }">
-            <v-btn v-on="on">
-              <span>Shop</span>
-            </v-btn>
-          </template>
-          <v-card
-            class="mx-auto"
-            max-width="344"
-            outlined
-          >
-
-            <v-list-item
-              v-for="(item, index) in items"
-              :key="index"
-              @click=""
-              href="/shop"
-            >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item>
-
-          </v-card>
-        </v-menu>
+        <a href="/shop" class="v-btn">
+          <span>Shop</span>
+        </a>
         <a href="/product" class="v-btn">
           <span>Product</span>
         </a>
@@ -123,11 +109,6 @@
           </v-btn>
 
         </v-card-text>
-
-        <v-card-text class="white--text pt-0">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </v-card-text>
-
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
@@ -142,11 +123,9 @@
         data () {
             return {
                 items: [
-                    { title: 'T-Shirts' },
-                    { title: 'Jackets' },
-                    { title: 'Shirts' },
-                    { title: 'Jeans' },
-                    { title: 'Shoes' },
+                    { title: 'Login' },
+                    { title: 'Sign Up' },
+                    { title: 'My Profile' },
                 ],
                 activeBtn: 1,
             }
