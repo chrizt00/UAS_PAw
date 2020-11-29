@@ -13,14 +13,6 @@
             </template>
             <v-divider></v-divider>
             <v-card-title>Price</v-card-title>
-            <v-range-slider
-              v-model="range"
-              :max="max"
-              :min="min"
-              :height="10"
-              class="align-center"
-              dense
-            ></v-range-slider>
             <v-row class="pa-2" dense>
               <v-col cols="12" sm="5">
                 <v-text-field
@@ -45,24 +37,7 @@
               </v-col>
             </v-row>
             <v-divider></v-divider>
-            <v-card-title class="pb-0">Customer Rating</v-card-title>
-            <v-container class="pt-0"  fluid>
-              <v-checkbox append-icon="mdi-star" label="4 & above" hide-details dense></v-checkbox>
-              <v-checkbox append-icon="mdi-star" label="3 & above" hide-details dense></v-checkbox>
-              <v-checkbox append-icon="mdi-star" label="2 & above" hide-details dense></v-checkbox>
-              <v-checkbox append-icon="mdi-star" label="1 & above" hide-details dense></v-checkbox>
-            </v-container>
             <v-divider></v-divider>
-            <v-card-title class="pb-0">Size</v-card-title>
-            <v-container class="pt-0" fluid>
-              <v-checkbox  label="XS" hide-details dense></v-checkbox>
-              <v-checkbox  label="S" hide-details dense></v-checkbox>
-              <v-checkbox  label="M" hide-details dense></v-checkbox>
-              <v-checkbox  label="L" hide-details dense></v-checkbox>
-              <v-checkbox  label="XL" hide-details dense></v-checkbox>
-              <v-checkbox  label="XXL" hide-details dense></v-checkbox>
-              <v-checkbox  label="XXXL" hide-details dense></v-checkbox>
-            </v-container>
 
           </v-card>
         </div>
@@ -71,15 +46,6 @@
         >
 
           <v-breadcrumbs class="pb-0" :items="breadcrums"></v-breadcrumbs>
-
-          <v-row dense>
-            <v-col cols="12" sm="8" class="pl-6 pt-6">
-              <small>Showing 1-12 of 200 products</small>
-            </v-col>
-            <v-col cols="12" sm="4">
-              <v-select class="pa-0" v-model="select" :items="options" style="margin-bottom: -20px;" outlined dense></v-select>
-            </v-col>
-          </v-row>
 
           <v-divider></v-divider>
 
@@ -111,7 +77,7 @@
                   </v-img>
                   <v-card-text class="text--primary">
                     <div><a href="/product" style="text-decoration: none">{{pro.name}}</a></div>
-                    <div>${{pro.price}}</div>
+                    <div>Rp.{{pro.price}}</div>
                   </v-card-text>
                 </v-card>
               </v-hover>
@@ -152,128 +118,94 @@
             ],
             page:1,
             breadcrums: [
-                {
-                    text: 'Home',
-                    disabled: false,
-                    href: 'breadcrumbs_home',
-                },
-                {
-                    text: 'Clothing',
-                    disabled: false,
-                    href: 'breadcrumbs_clothing',
-                },
-                {
-                    text: 'T-Shirts',
-                    disabled: true,
-                    href: 'breadcrumbs_shirts',
-                },
             ],
             min:0,
             max:10000,
             items: [
                 {
                     id: 2,
-                    name: 'Shoes',
+                    name: 'Color',
                     children: [
-                        { id: 2, name: 'Casuals' },
-                        { id: 3, name: 'Formals' },
-                        { id: 4, name: 'Sneakers' },
+                        { id: 2, name: 'Red' },
+                        { id: 3, name: 'Blue' },
+                        { id: 4, name: 'Yellow' },
+                        { id: 5, name: 'Green' },
+                        { id: 6, name: 'Black' },
+                        { id: 7, name: 'Others' },
                     ],
                 },
-                {
-                    id: 1,
-                    name: 'Clothing',
-                    children: [
-                        { id: 5, name: 'Shirts' },
-                        { id: 6, name: 'Tops' },
-                        { id: 7, name: 'Tunics' },
-                        { id: 8, name: 'Bodysuit' },
-                    ],
-                }
             ],
             products:[
                 {
                     id:1,
-                    name:'BLACK TEE',
-                    type:'Jackets',
-                    price:'18.00',
-                    src:require('../assets/img/shop/1.jpg')
+                    name:'',
+                    price:'253.000',
+                    src:require('../assets/img/Bag/1.png')
                 },
                 {
                     id:2,
-                    name:'WHITE TEE',
-                    type:'Polo',
-                    price:'40.00',
-                    src:require('../assets/img/shop/2.jpg')
+                    name:'',
+                    price:'500.000',
+                    src:require('../assets/img/Bag/2.png')
                 },
                 {
                     id:3,
-                    name:'Zara limited...',
-                    type:'Denim',
-                    price:'25.00',
-                    src:require('../assets/img/shop/3.jpg')
+                    name:'',
+                    price:'300.000',
+                    src:require('../assets/img/Bag/3.png')
                 },
                 {
                     id:4,
-                    name:'SKULL TEE',
-                    type:'Jackets',
-                    price:'30.00',
-                    src:require('../assets/img/shop/4.jpg')
+                    name:'',
+                    price:'250.000',
+                    src:require('../assets/img/Bag/4.png')
                 },
                 {
                     id:5,
-                    name:'MANGO WINTER',
-                    type:'Sweaters',
-                    price:'50.00',
-                    src:require('../assets/img/shop/5.jpg')
+                    name:'',
+                    price:'330.000',
+                    src:require('../assets/img/Bag/5.png')
                 },
                 {
                     id:6,
-                    name:'SHIRT',
-                    type:'Denim',
-                    price:'34.00',
-                    src:require('../assets/img/shop/6.jpg')
+                    name:'',
+                    price:'220.000',
+                    src:require('../assets/img/Bag/6.png')
                 },
                 {
                     id:7,
-                    name:'TRUCKER JACKET',
-                    type:'Jackets',
-                    price:'38.00',
-                    src:require('../assets/img/shop/7.jpg')
+                    name:'',
+                    price:'310.000',
+                    src:require('../assets/img/Bag/7.png')
                 },
                 {
                     id:8,
-                    name:'COATS',
-                    type:'Jackets',
-                    price:'25.00',
-                    src:require('../assets/img/shop/8.jpg')
+                    name:'',
+                    price:'400.000',
+                    src:require('../assets/img/Bag/8.png')
                 },{
                     id:9,
-                    name:'MANGO WINTER',
-                    type:'Sweaters',
-                    price:'50.00',
-                    src:require('../assets/img/shop/9.jpg')
+                    name:'',
+                    price:'410.000',
+                    src:require('../assets/img/Bag/9.png')
                 },
                 {
                     id:10,
-                    name:'SHIRT',
-                    type:'Denim',
-                    price:'34.00',
-                    src:require('../assets/img/shop/10.jpg')
+                    name:'',
+                    price:'450.000',
+                    src:require('../assets/img/Bag/10.png')
                 },
                 {
                     id:11,
-                    name:'TRUCKER JACKET',
-                    type:'Jackets',
-                    price:'38.00',
-                    src:require('../assets/img/shop/11.jpg')
+                    name:'',
+                    price:'535.000',
+                    src:require('../assets/img/Bag/11.png')
                 },
                 {
                     id:12,
-                    name:'COATS',
-                    type:'Jackets',
-                    price:'25.00',
-                    src:require('../assets/img/shop/12.jpg')
+                    name:'',
+                    price:'280.000',
+                    src:require('../assets/img/Bag/12.png')
                 }
             ]
         }),
