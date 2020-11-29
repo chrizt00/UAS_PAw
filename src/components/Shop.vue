@@ -139,7 +139,7 @@
                 {
                     id:1,
                     name:'',
-                    price:'253.000',
+                    price:'255.000',
                     src:require('../assets/img/Bag/1.png')
                 },
                 {
