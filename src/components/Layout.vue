@@ -13,6 +13,9 @@
       >
         <a href="/" class="white--text" style="text-decoration: none"><v-icon>mdi-truck</v-icon>&nbsp;ShipIT</a>
       </v-toolbar-title>
+
+     
+      
       <v-text-field
         flat
         solo-inverted
@@ -32,23 +35,37 @@
           <v-icon>mdi-cart</v-icon>
         </v-badge>
       </v-btn>
-      <v-menu open-on-hover offset-y>
+
+
+
+
+      <v-menu>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on">
             <v-icon>mdi-account-circle</v-icon>
           </v-btn>
         </template>
-        <v-card
+        
+       <v-card
           class="mx-auto"
           max-width="344"
-          outlined>
+          outlined
+          close-on-content-click>
+          
 
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-            @click="">
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
+          <v-list-item-group c>
+         <v-flex>
+        <login />
+      </v-flex>
+
+      <v-flex>
+        <Register />
+      </v-flex>
+
+      <v-flex>
+        <updateProfil />
+      </v-flex>
+          </v-list-item-group>
         </v-card>
       </v-menu>
     </v-app-bar>
@@ -119,16 +136,39 @@
   </v-app>
 </template>
 <script>
+import login from './login'
+import Register from './Register'
+import updateProfil from './updateProfil'
+
     export default {
+        components:{login, Register, updateProfil},
+        
         data () {
             return {
                 items: [
-                    { title: 'Login' },
-                    { title: 'Sign Up' },
-                    { title: 'My Profile' },
+                    { title: 'Login' , router: <login />},
+                    { title: 'Sign Up', router: 'Register' },
+                    { title: 'My Profile', router: './updateProfil' },
                 ],
                 activeBtn: 1,
             }
         },
+
+        methods: {
+      onOptionChanged(title) {
+        this.$bvModal.msgBoxConfirm('Please confirm that you want to delete everything.')
+        .then(confirmed => {
+          if(confirmed) {
+            this.actualOption = value;
+          } else {
+            this.selectedOption = this.actualOption;
+          }
+        }).
+        catch(() => {
+          /* Reset the value in case of an error */
+          this.selectedOption = this.actualOption;
+        })
+      }
+    }
     }
 </script>
