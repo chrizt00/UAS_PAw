@@ -11,29 +11,13 @@
       <v-toolbar-title
         style="width: 350px"
       >
-        <a href="/" class="white--text" style="text-decoration: none"><v-icon>mdi-truck</v-icon>&nbsp;ShipIT</a>
+        <a href="/" class="white--text" style="text-decoration: none"><v-icon>mdi-truck</v-icon>&nbsp;Ship</a>
       </v-toolbar-title>
 
-     
-      
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="mdi-magnify"
-        label="Search"
-        class="hidden-sm-and-down pl-10 ml-4"
-      />
+
       <v-spacer />
       <v-btn v-on="on" href="/cart" icon>
-        <v-badge
-          content="2"
-          value="2"
-          color="green"
-          overlap
-        >
           <v-icon>mdi-cart</v-icon>
-        </v-badge>
       </v-btn>
 
 
@@ -129,7 +113,7 @@
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>ShipIT</strong>
+          {{ new Date().getFullYear() }} — <strong>Ship</strong>
         </v-card-text>
       </v-card>
     </v-footer>

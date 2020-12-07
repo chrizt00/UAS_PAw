@@ -1,8 +1,6 @@
 {
-  "name": "shipit",
+  "name": "ship",
   "version": "0.0.1",
-  "description": "E-Commerce website template",
-  "author": "18chetanpatel@gmail.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
